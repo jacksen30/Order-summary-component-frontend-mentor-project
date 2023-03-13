@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet"  href="style.css" />
   
   <title>Frontend Mentor | Order summary card</title>
@@ -21,11 +24,16 @@
           device anywhere you like!
         </p>
       </div>
-      <div class="inner-selected-plan-card">
-        Annual Plan
-        $59.99/year
-
-        <a>Change</a>
+      <div class="inner-selected-plan-wrapper">
+        <img class="logo-music-note" src="images\icon-music.svg" alt="Music Note Logo">
+        <div class="plan-text">
+          <span class="bold-plan-text">Annual Plan</span>
+          <br>
+          <span class="price-plan-text">$59.99/year</span>
+        </div>
+        <div class="change-link">
+          <a href="#">Change</a>
+        </div>
       </div>
       <div class="inner-bottom-buttons-card">
         <button class="btn btn-proceed">Proceed to Payment</button>
