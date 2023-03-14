@@ -10,18 +10,25 @@ body {
     align-items: center;
     justify-content: center;
     font-family: 'Red Hat Display', sans-serif;
-    /* background-image: url(images/pattern-background-desktop.svg); */
-}
+    
+    background-color: hsl(225, 100%, 94%);
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: top left; /* As pattern only covers the top half - background-color fills in the other blank half */
+    background-size: 100%;
+    }
 
 .card-container {
-    border: 1px solid black;
     border-radius: 30px;
-    max-width: 360px;
+    max-width: 340px;
     overflow: hidden; /* Ensures img stays within border radius ect */
+    background-color: white;
+    z-index: 10; /* Keeps card container on top of the body background */
 }
 
 p {
-    font-size: 16px;
+    font-size: 15.3px;
+    text-align: center;
 }
 
 .hero-img {
@@ -35,13 +42,13 @@ p {
 
 .inner-bio-text-card h1 {
     font-weight: 900;
-    font-size: 24px;
+    font-size: 26px;
     padding-bottom: 15px;
     color:hsl(223, 47%, 23%);
+    text-align: center;
 }
 
 .inner-selected-plan-wrapper {
-   /* border: 1px solid red; */
     display: flex;
     align-items:center;
     justify-content:space-between;
@@ -65,8 +72,6 @@ p {
     color:hsl(223, 47%, 23%);
 }
 
-
-
 .btn {
     width: 85%;
     height: 40px;
@@ -74,7 +79,6 @@ p {
     border: none;
     font-weight: 700;
 }
-
 
 .btn-proceed {
     margin: 20px 25px 20px 25px;
@@ -102,14 +106,17 @@ a:hover {
     color: black;
 }
 
+@media screen and (max-width: 600px) {
 
+    body {
+        background-image: url('./images/pattern-background-mobile.svg');
+    }
 
-.test {
-color: hsl(225, 100%, 94%);
-color: hsl(245, 75%, 52%);
+    .inner-bio-text-card {
+        padding: 25px 38px 25px 38px;
+    }
 
-
-color: hsl(225, 100%, 98%);
-color: hsl(224, 23%, 55%);
-color: hsl(223, 47%, 23%);
+    p {
+        font-size: 16px;
+    }
 }
